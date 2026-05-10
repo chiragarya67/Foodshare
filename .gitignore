@@ -1,0 +1,72 @@
+# ============================================
+#  Dependencies
+# ============================================
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# ============================================
+#  Environment Variables (secrets, API keys)
+# ============================================
+.env
+.env.*
+!.env.example
+
+# ============================================
+#  Build Output
+# ============================================
+client/dist/
+client/build/
+server/dist/
+
+# ============================================
+#  Logs
+# ============================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ============================================
+#  Lock Files (optional — uncomment if needed)
+# ============================================
+# package-lock.json
+# client/package-lock.json
+# server/package-lock.json
+
+# ============================================
+#  OS Files
+# ============================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+
+# ============================================
+#  IDE / Editor
+# ============================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# ============================================
+#  Testing & Coverage
+# ============================================
+coverage/
+*.lcov
+.nyc_output/
+
+# ============================================
+#  Misc
+# ============================================
+*.tgz
+*.pid
+*.seed
+*.pid.lock
+.cache/
+.parcel-cache/
+.eslintcache
