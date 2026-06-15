@@ -6,6 +6,12 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const User = require('./models/User');
 const Donation = require('./models/Donation');
+const dns = require('dns')
+
+dns.setServers([
+  '1.1.1.1',
+  '8.8.8.8'
+])
 
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/foodshare';
 
