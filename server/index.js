@@ -70,7 +70,6 @@ mongoose
     process.exit(1);
   });
 
-const path = require('path');
 
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
