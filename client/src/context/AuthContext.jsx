@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
+axios.defaults.baseURL = 'https://foodshare-x1x5.onrender.com';
 
 const AuthContext = createContext(null);
 
