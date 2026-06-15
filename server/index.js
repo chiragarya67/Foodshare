@@ -70,10 +70,10 @@ mongoose
     process.exit(1);
   });
 
+const path = require('path');
 
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-// All other routes → React app
-app.use('.*', (req, res) => {
+app.use(function(req, res) {
   res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
 });
