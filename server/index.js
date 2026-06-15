@@ -6,6 +6,7 @@ const cors = require('cors');
 const morgan = require('morgan');
 require('dotenv').config();
 const dns = require('dns')
+const path = require('path');
 
 dns.setServers([
   '1.1.1.1',
@@ -68,3 +69,11 @@ mongoose
     console.error('❌ MongoDB connection error:', err.message);
     process.exit(1);
   });
+
+
+app.use(express.static(path.join(__dirname, '../client/dist')));
+
+// All other routes → React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
+});
