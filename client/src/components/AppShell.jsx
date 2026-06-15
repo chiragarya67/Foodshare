@@ -8,6 +8,7 @@ import {
   LayoutDashboard, Package, GitMerge, BarChart2, Shield,
   User, Bell, LogOut, Menu, X, Leaf, ChevronRight
 } from 'lucide-react';
+axios.defaults.baseURL = 'https://foodshare-x1x5.onrender.com'
 
 const NAV = [
   { label: 'Dashboard', icon: LayoutDashboard, path: '/dashboard', roles: ['business','charity','admin'] },
