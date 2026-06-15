@@ -5,6 +5,12 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const morgan = require('morgan');
 require('dotenv').config();
+const dns = require('dns')
+
+dns.setServers([
+  '1.1.1.1',
+  '8.8.8.8'
+])
 
 const app = express();
 const server = http.createServer(app);
